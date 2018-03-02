@@ -1,5 +1,8 @@
 package org.wecancodeit.columbus.reviewssitefullstack;
 
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
+
 import javax.annotation.Resource;
 
 import org.junit.Test;
@@ -15,18 +18,22 @@ public class JpaMappingTest {
 	@Resource
 	private TestEntityManager entityManager;
 
-	@Resource
-	private ReviewRepository reviewRepo;
-
-	@Resource
-	private CategoryRepository categoryRepo;
-
-	@Resource
-	private TagRepository tagRepo;
+	// @Resource
+	// private ReviewRepository reviewRepo;
+	//
+	// @Resource
+	// private CategoryRepository categoryRepo;
+	//
+	// @Resource
+	// private TagRepository tagRepo;
 
 	@Test
 	public void shouldSaveAndLoadReview() {
 		Review review = new Review("Review Name");
 
+		entityManager.flush();
+		entityManager.clear();
+
+		assertThat(review.getName(), is("Review Name"));
 	}
 }
