@@ -2,6 +2,7 @@ package org.wecancodeit.columbus.reviewssitefullstack;
 
 import javax.annotation.Resource;
 
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
@@ -22,4 +23,10 @@ public class JpaMappingTest {
 
 	@Resource
 	private TagRepository tagRepo;
+
+	@Test
+	public void shouldSaveAndLoadReview() {
+		Review review = new Review("");
+
+	}
 }
