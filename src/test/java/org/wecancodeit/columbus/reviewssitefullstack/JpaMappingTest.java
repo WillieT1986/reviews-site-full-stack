@@ -13,4 +13,7 @@ public class JpaMappingTest {
 
 	@Resource
 	private TestEntityManager entityManager;
+
+	@Resource
+	private ReviewRepository reviewRepo;
 }
