@@ -30,7 +30,7 @@ public class JpaMappingTest {
 
 	@Test
 	public void shouldSaveAndLoadReview() {
-		Review review = new Review("Review Name", null);
+		Review review = new Review("Review Name");
 		review = reviewRepo.save(review);
 		long reviewId = review.getId();
 
@@ -43,7 +43,7 @@ public class JpaMappingTest {
 
 	@Test
 	public void shouldSaveReviewToCategoryRelationship() {
-		Category category = new Category("Category Name");
+		Category category = new Category("Category Name", null);
 		categoryRepo.save(category);
 		long categoryId = category.getId();
 
@@ -73,8 +73,34 @@ public class JpaMappingTest {
 	}
 
 	@Test
-	public void should() {
+	public void shouldEstablishReviewToTagRelationships() {
+		Tag java = tagRepo.save(new Tag("Java"));
+		Tag ruby = tagRepo.save(new Tag("Ruby"));
 
+		Review review = new Review("Review Name", java, ruby);
+		review = reviewRepo.save(review);
+		long reviewName = review.getId();
+
+		review = reviewRepo.findOne(reviewName);
+		assertThat(review.getTags(), containsInAnyOrder(java, ruby));
+	}
+
+	@Test
+	public void shouldEstablishTagToReviewsRelationship() {
+		Tag tag = tagRepo.save(new Tag("Ruby"));
+		long tagId = tag.getId();
+
+		Review reviewNameOne = new Review("reviewNameOne", tag);
+		reviewNameOne = reviewRepo.save(reviewNameOne);
+
+		Review reviewNameTwo = new Review("reviewNameTwo", tag);
+		reviewNameTwo = reviewRepo.save(reviewNameTwo);
+
+		entityManager.flush();
+		entityManager.clear();
+
+		tag = tagRepo.findOne(tagId);
+		assertThat(tag.getReviews(), containsInAnyOrder(reviewNameOne, reviewNameTwo));
 	}
 
 }

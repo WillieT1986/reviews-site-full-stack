@@ -1,6 +1,9 @@
 package org.wecancodeit.columbus.reviewssitefullstack;
 
+import static java.util.Arrays.asList;
+
 import java.util.Collection;
+import java.util.HashSet;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,8 +24,13 @@ public class Category {
 	public Category() {
 	}
 
-	public Category(String name) {
+	public Category(String name, Review reviews) {
 		this.name = name;
+		this.reviews = new HashSet<>(asList(reviews));
+	}
+
+	public Collection<Review> getReviews() {
+		return reviews;
 	}
 
 	public long getId() {
@@ -31,10 +39,6 @@ public class Category {
 
 	public String getName() {
 		return name;
-	}
-
-	public Collection<Review> getReviews() {
-		return reviews;
 	}
 
 	@Override
