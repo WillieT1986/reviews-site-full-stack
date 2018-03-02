@@ -16,7 +16,7 @@ public class Review {
 
 	}
 
-	public Review(String name) {
+	public Review(String name, Category category) {
 		this.name = name;
 	}
 
@@ -26,10 +26,6 @@ public class Review {
 
 	public long getId() {
 		return id;
-	}
-
-	public Object getCategory() {
-		return null;
 	}
 
 	// @Override

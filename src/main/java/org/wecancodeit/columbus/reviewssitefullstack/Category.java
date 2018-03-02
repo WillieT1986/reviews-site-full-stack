@@ -10,23 +10,22 @@ public class Category {
 	@Id
 	@GeneratedValue
 	private long id;
-	private Review review;
+	private static String review;
 	private String name;
 
 	public Category() {
-
 	}
 
-	public Category(String name, Review review) {
+	public Category(String name) {
 		this.name = name;
-		this.review = review;
+
 	}
 
 	public long getId() {
 		return id;
 	}
 
-	public Review review() {
+	public String getReviews() {
 		return review;
 	}
 

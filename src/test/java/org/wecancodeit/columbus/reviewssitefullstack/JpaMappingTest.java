@@ -42,21 +42,21 @@ public class JpaMappingTest {
 	}
 
 	@Test
-	public void shouldSaveCategoryToReviewRelationship() {
-		Review review = new Review("Review Name");
-		reviewRepo.save(review);
-		long reviewId = review.getId();
+	public void shouldSaveReviewToCategoryRelationship() {
+		Category category = new Category("Category Name");
+		categoryRepo.save(category);
+		long categoryId = category.getId();
 
-		Category first = new Category("foo", review);
-		categoryRepo.save(first);
+		Review first = new Review("foo", category);
+		reviewRepo.save(first);
 
-		Category second = new Category("bar", review);
-		categoryRepo.save(second);
+		Review second = new Review("bar", category);
+		reviewRepo.save(second);
 
 		entityManager.flush();
 		entityManager.clear();
 
-		review = reviewRepo.findOne(reviewId);
-		assertThat(review.getCategory(), containsInAnyOrder(first, second));
+		category = categoryRepo.findOne(categoryId);
+		assertThat(category.getReviews(), containsInAnyOrder(first, second));
 	}
 }
