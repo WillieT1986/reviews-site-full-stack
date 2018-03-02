@@ -28,6 +28,10 @@ public class Review {
 		return id;
 	}
 
+	public Object getCategory() {
+		return null;
+	}
+
 	// @Override
 	// public int hashCode() {
 	// return ((Long) id).hashCode();

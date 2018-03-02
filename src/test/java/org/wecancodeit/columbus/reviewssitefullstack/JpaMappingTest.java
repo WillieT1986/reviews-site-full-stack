@@ -1,5 +1,6 @@
 package org.wecancodeit.columbus.reviewssitefullstack;
 
+import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
@@ -48,5 +49,14 @@ public class JpaMappingTest {
 
 		Category first = new Category("foo", review);
 		categoryRepo.save(first);
+
+		Category second = new Category("bar", review);
+		categoryRepo.save(second);
+
+		entityManager.flush();
+		entityManager.clear();
+
+		review = reviewRepo.findOne(reviewId);
+		assertThat(review.getCategory(), containsInAnyOrder(first, second));
 	}
 }
