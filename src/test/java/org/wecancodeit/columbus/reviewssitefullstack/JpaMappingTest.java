@@ -25,8 +25,8 @@ public class JpaMappingTest {
 	@Resource
 	private CategoryRepository categoryRepo;
 
-	// @Resource
-	// private TagRepository tagRepo;
+	@Resource
+	private TagRepository tagRepo;
 
 	@Test
 	public void shouldSaveAndLoadReview() {
@@ -62,7 +62,7 @@ public class JpaMappingTest {
 
 	@Test
 	public void shouldSaveAndLoadTag() {
-
+		Tag tag = tagRepo.save(new Tag("Review Name"));
 	}
 
 }
