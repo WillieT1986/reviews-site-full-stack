@@ -16,4 +16,7 @@ public class JpaMappingTest {
 
 	@Resource
 	private ReviewRepository reviewRepo;
+
+	@Resource
+	private CategoryRepository categoryRepo;
 }
