@@ -26,7 +26,7 @@ public class JpaMappingTest {
 
 	@Test
 	public void shouldSaveAndLoadReview() {
-		Review review = new Review("");
+		Review review = new Review("Review Name");
 
 	}
 }
