@@ -18,9 +18,9 @@ public class JpaMappingTest {
 	@Resource
 	private TestEntityManager entityManager;
 
-	// @Resource
-	// private ReviewRepository reviewRepo;
-	//
+	@Resource
+	private ReviewRepository reviewRepo;
+
 	// @Resource
 	// private CategoryRepository categoryRepo;
 	//
@@ -30,10 +30,13 @@ public class JpaMappingTest {
 	@Test
 	public void shouldSaveAndLoadReview() {
 		Review review = new Review("Review Name");
+		review = reviewRepo.save(review);
+		long reviewId = review.getId();
 
 		entityManager.flush();
 		entityManager.clear();
 
+		review = reviewRepo.findOne(reviewId);
 		assertThat(review.getName(), is("Review Name"));
 	}
 }
