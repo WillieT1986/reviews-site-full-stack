@@ -19,4 +19,7 @@ public class JpaMappingTest {
 
 	@Resource
 	private CategoryRepository categoryRepo;
+
+	@Resource
+	private TagRepository tagRepo;
 }
