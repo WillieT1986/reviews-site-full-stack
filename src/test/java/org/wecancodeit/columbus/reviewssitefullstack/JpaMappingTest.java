@@ -62,7 +62,19 @@ public class JpaMappingTest {
 
 	@Test
 	public void shouldSaveAndLoadTag() {
-		Tag tag = tagRepo.save(new Tag("Review Name"));s
+		Tag tag = tagRepo.save(new Tag("Tag Name"));
+		long tagId = tag.getId();
+
+		entityManager.flush();
+		entityManager.clear();
+
+		tag = tagRepo.findOne(tagId);
+		assertThat(tag.getName(), is("Tag Name"));
+	}
+
+	@Test
+	public void should() {
+
 	}
 
 }
