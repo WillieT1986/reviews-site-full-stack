@@ -21,9 +21,9 @@ public class JpaMappingTest {
 	@Resource
 	private ReviewRepository reviewRepo;
 
-	// @Resource
-	// private CategoryRepository categoryRepo;
-	//
+	@Resource
+	private CategoryRepository categoryRepo;
+
 	// @Resource
 	// private TagRepository tagRepo;
 
@@ -38,5 +38,15 @@ public class JpaMappingTest {
 
 		review = reviewRepo.findOne(reviewId);
 		assertThat(review.getName(), is("Review Name"));
+	}
+
+	@Test
+	public void shouldSaveCategoryToReviewRelationship() {
+		Review review = new Review("Review Name");
+		reviewRepo.save(review);
+		long reviewId = review.getId();
+
+		Category first = new Category("foo", review);
+		categoryRepo.save(first);
 	}
 }
