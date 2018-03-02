@@ -62,7 +62,7 @@ public class JpaMappingTest {
 
 	@Test
 	public void shouldSaveAndLoadTag() {
-		Tag tag = tagRepo.save(new Tag("Review Name"));
+		Tag tag = tagRepo.save(new Tag("Review Name"));s
 	}
 
 }
