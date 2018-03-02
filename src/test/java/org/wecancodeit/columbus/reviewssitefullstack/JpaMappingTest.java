@@ -30,7 +30,7 @@ public class JpaMappingTest {
 
 	@Test
 	public void shouldSaveAndLoadReview() {
-		Review review = new Review("Review Name");
+		Review review = new Review("Review Name", null);
 		review = reviewRepo.save(review);
 		long reviewId = review.getId();
 
@@ -48,10 +48,10 @@ public class JpaMappingTest {
 		long categoryId = category.getId();
 
 		Review first = new Review("foo", category);
-		reviewRepo.save(first);
+		first = reviewRepo.save(first);
 
 		Review second = new Review("bar", category);
-		reviewRepo.save(second);
+		second = reviewRepo.save(second);
 
 		entityManager.flush();
 		entityManager.clear();
@@ -59,4 +59,10 @@ public class JpaMappingTest {
 		category = categoryRepo.findOne(categoryId);
 		assertThat(category.getReviews(), containsInAnyOrder(first, second));
 	}
+
+	@Test
+	public void shouldSaveAndLoadTag() {
+
+	}
+
 }
