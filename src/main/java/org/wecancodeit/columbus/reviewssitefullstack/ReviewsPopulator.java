@@ -74,7 +74,7 @@ public class ReviewsPopulator implements CommandLineRunner {
 		tag17 = tagRepo.save(tag17);
 
 		// How to remove the yellow lines from review and anime???
-		Review review = reviewRepo.save(new Review("Java One", "imageUrl", "Description", tag1, tag2));
+		Review review = reviewRepo.save(new Review("Anime One", "imageUrl", "Description", tag1, tag2));
 
 		Category anime = categoryRepo.save(new Category("Anime", "Description of Anime Goes Here..."));
 	}
