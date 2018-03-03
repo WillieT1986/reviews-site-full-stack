@@ -25,7 +25,7 @@ public class ReviewsPopulator implements CommandLineRunner {
 		Tag tdd = new Tag("TDD");
 		java = tagRepo.save(tdd);
 
-		Review review = reviewRepo.save(new Review("Java One", java, tdd));
+		Review review = reviewRepo.save(new Review("Java One", "Description", java, tdd));
 
 		categoryRepo.save(new Category("Head First Java", review));
 		categoryRepo.save(new Category("Head First Design Patterns", review));

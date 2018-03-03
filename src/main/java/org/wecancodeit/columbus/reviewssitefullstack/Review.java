@@ -20,16 +20,18 @@ public class Review {
 
 	@ManyToOne
 	private Category category;
-	private String name;
 
 	@ManyToMany
 	private Collection<Tag> tags;
+	private String name;
+	private String description;
 
 	public Review() {
 	}
 
-	public Review(String name, Tag... tags) {
+	public Review(String name, String description, Tag... tags) {
 		this.name = name;
+		this.description = description;
 		this.tags = new HashSet<>(asList(tags));
 	}
 
@@ -64,6 +66,10 @@ public class Review {
 			return false;
 		}
 		return id == ((Review) obj).id;
+	}
+
+	public String getDescription() {
+		return description;
 	}
 
 }

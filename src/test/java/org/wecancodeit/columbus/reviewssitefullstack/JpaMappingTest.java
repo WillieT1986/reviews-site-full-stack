@@ -2,6 +2,7 @@ package org.wecancodeit.columbus.reviewssitefullstack;
 
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
 import javax.annotation.Resource;
@@ -30,7 +31,7 @@ public class JpaMappingTest {
 
 	@Test
 	public void shouldSaveAndLoadReview() {
-		Review review = new Review("Review Name");
+		Review review = new Review("Review Name", "Description");
 		review = reviewRepo.save(review);
 		long reviewId = review.getId();
 
@@ -77,7 +78,7 @@ public class JpaMappingTest {
 		Tag java = tagRepo.save(new Tag("Java"));
 		Tag ruby = tagRepo.save(new Tag("Ruby"));
 
-		Review review = new Review("Review Name", java, ruby);
+		Review review = new Review("Review Name", "Description", java, ruby);
 		review = reviewRepo.save(review);
 		long reviewName = review.getId();
 
@@ -90,10 +91,10 @@ public class JpaMappingTest {
 		Tag tag = tagRepo.save(new Tag("Ruby"));
 		long tagId = tag.getId();
 
-		Review reviewNameOne = new Review("reviewNameOne", tag);
+		Review reviewNameOne = new Review("reviewNameOne", "Description", tag);
 		reviewNameOne = reviewRepo.save(reviewNameOne);
 
-		Review reviewNameTwo = new Review("reviewNameTwo", tag);
+		Review reviewNameTwo = new Review("reviewNameTwo", "Description", tag);
 		reviewNameTwo = reviewRepo.save(reviewNameTwo);
 
 		entityManager.flush();
@@ -103,4 +104,16 @@ public class JpaMappingTest {
 		assertThat(tag.getReviews(), containsInAnyOrder(reviewNameOne, reviewNameTwo));
 	}
 
+	@Test
+	public void shouldReturnReviewNameAndDescription() {
+		Tag tag = tagRepo.save(new Tag("Ruby"));
+		long tagId = tag.getId();
+
+		Review underTest = new Review("Review Name", "Description", tag);
+		String check = underTest.getName();
+		String check2 = underTest.getDescription();
+
+		assertEquals(check, "Review Name");
+		assertEquals(check2, "Description");
+	}
 }
