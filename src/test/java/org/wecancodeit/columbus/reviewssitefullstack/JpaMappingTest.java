@@ -107,7 +107,6 @@ public class JpaMappingTest {
 	@Test
 	public void shouldReturnReviewNameAndDescription() {
 		Tag tag = tagRepo.save(new Tag("Ruby"));
-		long tagId = tag.getId();
 
 		Review underTest = new Review("Review Name", "Description", tag);
 		String check = underTest.getName();
