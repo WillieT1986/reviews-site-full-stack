@@ -31,7 +31,7 @@ public class JpaMappingTest {
 
 	@Test
 	public void shouldSaveAndLoadReview() {
-		Review review = new Review("Review Name", "imageUrl", "Description");
+		Review review = new Review(null, "Review Name", "imageUrl", "Description");
 		review = reviewRepo.save(review);
 		long reviewId = review.getId();
 
@@ -44,14 +44,14 @@ public class JpaMappingTest {
 
 	@Test
 	public void shouldSaveReviewToCategoryRelationship() {
-		Category category = new Category("Category Name", "Description");
+		Category category = new Category("Category Name");
 		categoryRepo.save(category);
 		long categoryId = category.getId();
 
-		Review first = new Review(category, "foo");
+		Review first = new Review(null, "Review Name", "imageUrl", "Description");
 		first = reviewRepo.save(first);
 
-		Review second = new Review(category, "bar");
+		Review second = new Review(null, "Review Name", "imageUrl", "Description");
 		second = reviewRepo.save(second);
 
 		entityManager.flush();
@@ -78,7 +78,7 @@ public class JpaMappingTest {
 		Tag java = tagRepo.save(new Tag("Java"));
 		Tag ruby = tagRepo.save(new Tag("Ruby"));
 
-		Review review = new Review("Review Name", "imageUrl", "Description", java, ruby);
+		Review review = new Review(null, "Review Name", "imageUrl", "Description", java, ruby);
 		review = reviewRepo.save(review);
 		long reviewName = review.getId();
 
@@ -91,10 +91,10 @@ public class JpaMappingTest {
 		Tag tag = tagRepo.save(new Tag("Ruby"));
 		long tagId = tag.getId();
 
-		Review reviewNameOne = new Review("reviewNameOne", "imageUrl", "Description", tag);
+		Review reviewNameOne = new Review(null, "reviewNameOne", "imageUrl", "Description", tag);
 		reviewNameOne = reviewRepo.save(reviewNameOne);
 
-		Review reviewNameTwo = new Review("reviewNameTwo", "imageUrl", "Description", tag);
+		Review reviewNameTwo = new Review(null, "reviewNameTwo", "imageUrl", "Description", tag);
 		reviewNameTwo = reviewRepo.save(reviewNameTwo);
 
 		entityManager.flush();
@@ -108,7 +108,7 @@ public class JpaMappingTest {
 	public void shouldReturnReviewNameImageAndDescription() {
 		Tag tag = tagRepo.save(new Tag("Ruby"));
 
-		Review underTest = new Review("Review Name", "imageUrl", "Description", tag);
+		Review underTest = new Review(null, "Review Name", "imageUrl", "Description", tag);
 		String check = underTest.getTitle();
 		String check2 = underTest.getImageUrl();
 		String check3 = underTest.getDescription();

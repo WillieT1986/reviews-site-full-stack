@@ -30,17 +30,18 @@ public class Review {
 	public Review() {
 	}
 
-	public Review(String title, String imageUrl, String description, Tag... tags) {
+	public Review(Category category, String title, String imageUrl, String description, Tag... tags) {
+		this.category = category;
 		this.title = title;
 		this.imageUrl = imageUrl;
 		this.description = description;
 		this.tags = new HashSet<>(asList(tags));
 	}
 
-	public Review(Category category, String title) {
-		this.category = category;
-		this.title = title;
-	}
+	// public Review(Category category, String title) {
+	// this.category = category;
+	// this.title = title;
+	// }
 
 	public Collection<Tag> getTags() {
 		return tags;

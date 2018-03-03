@@ -18,14 +18,14 @@ public class Category {
 	private Collection<Review> reviews;
 
 	private String categoryName;
-	private String description;
+	// private String description;
 
 	public Category() {
 	}
 
-	public Category(String categoryName, String description) {
+	public Category(String categoryName) {
 		this.categoryName = categoryName;
-		this.description = description;
+		// this.description = description;
 	}
 
 	public Collection<Review> getReviews() {
