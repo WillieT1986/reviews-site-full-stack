@@ -4,18 +4,18 @@
 	<title>Review of Anime</title>
 </head>
 <body>
-	<header th:each="review: ${reviews}">
+	<header>
 		<h1 th:text="${review.title}"></h1>
 	</header>
 	
-	<article th:each="review: ${reviews}">
+	<!-- <article th:each="review: ${reviews}">
 		<img th:src="${review.imageURL}" />
 		<h2>Description</h2>
 			<p th:text="${review.description}" />
 		<h4>Tags</h4>
-			<p th:text="${review.tag1}" />
-	<a href="http://localhost:8080/reviews">Back to home</a>
-	</article>
+			<p th:text="${review.tag1}" h:text="${review.tag2}" />
+	</article> -->
+		<a href="http://localhost:8080/categories">Back to home</a>
 
 </body>
 </html>
