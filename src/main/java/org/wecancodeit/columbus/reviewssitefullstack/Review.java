@@ -37,9 +37,9 @@ public class Review {
 		this.tags = new HashSet<>(asList(tags));
 	}
 
-	public Review(String title, Category category) {
-		this.title = title;
+	public Review(Category category, String title) {
 		this.category = category;
+		this.title = title;
 	}
 
 	public Collection<Tag> getTags() {
