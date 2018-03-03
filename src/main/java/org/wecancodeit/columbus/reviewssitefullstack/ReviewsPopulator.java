@@ -57,8 +57,6 @@ public class ReviewsPopulator implements CommandLineRunner {
 
 		Review review = reviewRepo.save(new Review("Java One", "imageUrl", "Description", tag1, tag2));
 
-		categoryRepo.save(new Category("Head First Java", review));
-		categoryRepo.save(new Category("Head First Design Patterns", review));
+		categoryRepo.save(new Category("Anime", review));
 	}
-
 }
