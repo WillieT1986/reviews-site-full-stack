@@ -20,12 +20,12 @@ public class ReviewsPopulator implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		Tag java = new Tag("Java");
-		java = tagRepo.save(java);
-		Tag tdd = new Tag("TDD");
-		java = tagRepo.save(tdd);
+		Tag tag1 = new Tag("Java");
+		tag1 = tagRepo.save(tag1);
+		Tag tag2 = new Tag("TDD");
+		tag1 = tagRepo.save(tag2);
 
-		Review review = reviewRepo.save(new Review("Java One", "Description", java, tdd));
+		Review review = reviewRepo.save(new Review("Java One", "imageUrl", "Description", tag1, tag2));
 
 		categoryRepo.save(new Category("Head First Java", review));
 		categoryRepo.save(new Category("Head First Design Patterns", review));
