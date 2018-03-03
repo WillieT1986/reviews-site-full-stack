@@ -37,7 +37,14 @@ public class ReviewsPopulator implements CommandLineRunner {
 		Tag tag16 = createTag("Shounen");
 		Tag tag17 = createTag("Super Powers");
 
-		reviewRepo.save(new Review("Anime One", "imageUrl", "Description", tag1, tag2));
+		reviewRepo.save(new Review("Anime One", "imageUrl", "Description", tag1, tag2, tag3, tag4, tag16, tag17));
+		reviewRepo.save(new Review("Anime Two", "imageUrl", "Description", tag1, tag2, tag3, tag7, tag10, tag16));
+		reviewRepo.save(new Review("Anime Three", "imageUrl", "Description", tag1, tag2, tag3, tag5, tag7, tag10, tag11,
+				tag16));
+		reviewRepo.save(new Review("Anime Four", "imageUrl", "Description", tag1, tag2, tag7, tag12));
+		reviewRepo.save(new Review("Anime Five", "imageUrl", "Description", tag1, tag2, tag7, tag8, tag10));
+		reviewRepo.save(new Review("Anime Six", "imageUrl", "Description", tag1, tag5, tag9, tag11, tag13, tag14));
+		reviewRepo.save(new Review("Anime Seven", "imageUrl", "Description", tag6, tag15, tag16));
 
 		categoryRepo.save(new Category("Anime", "Description of Anime Goes Here..."));
 	}
