@@ -22,54 +22,23 @@ public class ReviewsPopulator implements CommandLineRunner {
 
 		// Default Tags for current Anime listed in this review. Is there a better way
 		// for this???
-		Tag tag1 = tagRepo.save(new Tag("Action"));
-
+		Tag tag1 = createTag("Action");
 		Tag tag2 = createTag("Adventure");
-
-		Tag tag3 = new Tag("Comedy");
-		tag3 = tagRepo.save(tag3);
-
-		Tag tag4 = new Tag("Demons");
-		tag4 = tagRepo.save(tag4);
-
-		Tag tag5 = new Tag("Drama");
-		tag5 = tagRepo.save(tag5);
-
-		Tag tag6 = new Tag("Ecchi");
-		tag6 = tagRepo.save(tag6);
-
-		Tag tag7 = new Tag("Fantasy");
-		tag7 = tagRepo.save(tag7);
-
-		Tag tag8 = new Tag("Game");
-		tag8 = tagRepo.save(tag8);
-
-		Tag tag9 = new Tag("Historical");
-		tag9 = tagRepo.save(tag9);
-
-		Tag tag10 = new Tag("Magic");
-		tag10 = tagRepo.save(tag10);
-
-		Tag tag11 = new Tag("Martial Arts");
-		tag11 = tagRepo.save(tag11);
-
-		Tag tag12 = new Tag("Military");
-		tag12 = tagRepo.save(tag12);
-
-		Tag tag13 = new Tag("Romance");
-		tag13 = tagRepo.save(tag13);
-
-		Tag tag14 = new Tag("Samurai");
-		tag14 = tagRepo.save(tag14);
-
-		Tag tag15 = new Tag("School");
-		tag15 = tagRepo.save(tag15);
-
-		Tag tag16 = new Tag("Shounen");
-		tag16 = tagRepo.save(tag16);
-
-		Tag tag17 = new Tag("Super Powers");
-		tag17 = tagRepo.save(tag17);
+		Tag tag3 = createTag("Comedy");
+		Tag tag4 = createTag("Demons");
+		Tag tag5 = createTag("Drama");
+		Tag tag6 = createTag("Ecchi");
+		Tag tag7 = createTag("Fantasy");
+		Tag tag8 = createTag("Game");
+		Tag tag9 = createTag("Historical");
+		Tag tag10 = createTag("Magic");
+		Tag tag11 = createTag("Martial Arts");
+		Tag tag12 = createTag("Military");
+		Tag tag13 = createTag("Romance");
+		Tag tag14 = createTag("Samurai");
+		Tag tag15 = createTag("School");
+		Tag tag16 = createTag("Shounen");
+		Tag tag17 = createTag("Super Powers");
 
 		// How to remove the yellow lines from review and anime???
 		reviewRepo.save(new Review("Anime One", "imageUrl", "Description", tag1, tag2));
