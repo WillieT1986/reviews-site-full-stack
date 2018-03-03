@@ -40,9 +40,9 @@ public class Category {
 		return categoryName;
 	}
 
-	public String getDescription() {
-		return description;
-	}
+	// public String getDescription() {
+	// return description;
+	// }
 
 	@Override
 	public int hashCode() {
