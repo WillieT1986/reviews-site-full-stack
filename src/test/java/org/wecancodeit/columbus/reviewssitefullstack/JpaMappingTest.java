@@ -44,14 +44,14 @@ public class JpaMappingTest {
 
 	@Test
 	public void shouldSaveReviewToCategoryRelationship() {
-		Category category = new Category("Category Name");
+		Category category = new Category("Anime");
 		categoryRepo.save(category);
 		long categoryId = category.getId();
 
-		Review first = new Review(null, "Review Name", "imageUrl", "Description");
+		Review first = new Review(category, "Review Name", "imageUrl", "Description");
 		first = reviewRepo.save(first);
 
-		Review second = new Review(null, "Review Name", "imageUrl", "Description");
+		Review second = new Review(category, "Review Name", "imageUrl", "Description");
 		second = reviewRepo.save(second);
 
 		entityManager.flush();
