@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
 	<title>Categories</title>
 </head>
+
 <body>
 	<header>
-		<h1>Categories</h1>
+		<h1>List of Categories to Review</h1>
 	</header>
 
 	<article th:each="category: ${categories}">
 		<ul>
 			<li><h3><a th:href="@{/category(id=${category.id})}" th:text="${category.categoryName}"></a></h3></li>
-					<!-- <p th:text="${category.tag}"/> -->
 		</ul>
 	</article>
 

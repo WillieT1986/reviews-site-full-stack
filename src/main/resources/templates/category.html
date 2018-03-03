@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-	<title>Category</title>
+	<title>Anime</title>
 </head>
+
 <body>
-	<header th:each="category: ${categories}">
-		<h1 th:text="${category.category}"></h1>
+	<header>
+		<h1 th:text="${category.categoryName}"></h1>
 	</header>
 
-	<article th:each="category: ${categories}">
-		<h2>Category</h2>
-			<p th:text="${category.category}" />
-	<a href="http://localhost:8080/categories">Back to home</a>
-	</article>
+	
+	<article th:each="category: ${category.reviews}">
+		<ul>
+			<li><h3><a th:href="@{/review(id=${category.id})}" th:text="${reviews.title}"></a></h3></li>
 
+		</ul>
+	</article>
+		<a href="http://localhost:8080/categories">Back to home</a>
+				<p th:text="${tag1}"/>
 </body>
 </html>
