@@ -25,12 +25,14 @@ public class Review {
 	private Collection<Tag> tags;
 	private String title;
 	private String description;
+	private String imageUrl;
 
 	public Review() {
 	}
 
-	public Review(String title, String description, Tag... tags) {
+	public Review(String title, String imageUrl, String description, Tag... tags) {
 		this.title = title;
+		this.imageUrl = imageUrl;
 		this.description = description;
 		this.tags = new HashSet<>(asList(tags));
 	}
@@ -70,6 +72,10 @@ public class Review {
 
 	public String getDescription() {
 		return description;
+	}
+
+	public String getImageUrl() {
+		return imageUrl;
 	}
 
 }

@@ -31,7 +31,7 @@ public class JpaMappingTest {
 
 	@Test
 	public void shouldSaveAndLoadReview() {
-		Review review = new Review("Review Name", "Description");
+		Review review = new Review("Review Name", "imageUrl", "Description");
 		review = reviewRepo.save(review);
 		long reviewId = review.getId();
 
@@ -78,7 +78,7 @@ public class JpaMappingTest {
 		Tag java = tagRepo.save(new Tag("Java"));
 		Tag ruby = tagRepo.save(new Tag("Ruby"));
 
-		Review review = new Review("Review Name", "Description", java, ruby);
+		Review review = new Review("Review Name", "imageUrl", "Description", java, ruby);
 		review = reviewRepo.save(review);
 		long reviewName = review.getId();
 
@@ -91,10 +91,10 @@ public class JpaMappingTest {
 		Tag tag = tagRepo.save(new Tag("Ruby"));
 		long tagId = tag.getId();
 
-		Review reviewNameOne = new Review("reviewNameOne", "Description", tag);
+		Review reviewNameOne = new Review("reviewNameOne", "imageUrl", "Description", tag);
 		reviewNameOne = reviewRepo.save(reviewNameOne);
 
-		Review reviewNameTwo = new Review("reviewNameTwo", "Description", tag);
+		Review reviewNameTwo = new Review("reviewNameTwo", "imageUrl", "Description", tag);
 		reviewNameTwo = reviewRepo.save(reviewNameTwo);
 
 		entityManager.flush();
@@ -105,14 +105,16 @@ public class JpaMappingTest {
 	}
 
 	@Test
-	public void shouldReturnReviewNameDescription() {
+	public void shouldReturnReviewNameImageAndDescription() {
 		Tag tag = tagRepo.save(new Tag("Ruby"));
 
-		Review underTest = new Review("Review Name", "Description", tag);
+		Review underTest = new Review("Review Name", "imageUrl", "Description", tag);
 		String check = underTest.getTitle();
-		String check2 = underTest.getDescription();
+		String check2 = underTest.getImageUrl();
+		String check3 = underTest.getDescription();
 
 		assertEquals(check, "Review Name");
-		assertEquals(check2, "Description");
+		assertEquals(check2, "imageUrl");
+		assertEquals(check3, "Description");
 	}
 }
