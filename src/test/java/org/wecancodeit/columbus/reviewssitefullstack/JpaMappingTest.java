@@ -39,7 +39,7 @@ public class JpaMappingTest {
 		entityManager.clear();
 
 		review = reviewRepo.findOne(reviewId);
-		assertThat(review.getName(), is("Review Name"));
+		assertThat(review.getTitle(), is("Review Name"));
 	}
 
 	@Test
@@ -105,11 +105,11 @@ public class JpaMappingTest {
 	}
 
 	@Test
-	public void shouldReturnReviewNameAndDescription() {
+	public void shouldReturnReviewNameDescription() {
 		Tag tag = tagRepo.save(new Tag("Ruby"));
 
 		Review underTest = new Review("Review Name", "Description", tag);
-		String check = underTest.getName();
+		String check = underTest.getTitle();
 		String check2 = underTest.getDescription();
 
 		assertEquals(check, "Review Name");

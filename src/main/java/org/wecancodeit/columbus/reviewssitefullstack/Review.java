@@ -23,20 +23,20 @@ public class Review {
 
 	@ManyToMany
 	private Collection<Tag> tags;
-	private String name;
+	private String title;
 	private String description;
 
 	public Review() {
 	}
 
-	public Review(String name, String description, Tag... tags) {
-		this.name = name;
+	public Review(String title, String description, Tag... tags) {
+		this.title = title;
 		this.description = description;
 		this.tags = new HashSet<>(asList(tags));
 	}
 
-	public Review(String name, Category category) {
-		this.name = name;
+	public Review(String title, Category category) {
+		this.title = title;
 		this.category = category;
 	}
 
@@ -44,8 +44,8 @@ public class Review {
 		return tags;
 	}
 
-	public String getName() {
-		return name;
+	public String getTitle() {
+		return title;
 	}
 
 	public long getId() {
