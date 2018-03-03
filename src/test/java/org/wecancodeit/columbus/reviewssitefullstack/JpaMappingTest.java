@@ -44,7 +44,7 @@ public class JpaMappingTest {
 
 	@Test
 	public void shouldSaveReviewToCategoryRelationship() {
-		Category category = new Category("Category Name", null);
+		Category category = new Category("Category Name", "Description");
 		categoryRepo.save(category);
 		long categoryId = category.getId();
 

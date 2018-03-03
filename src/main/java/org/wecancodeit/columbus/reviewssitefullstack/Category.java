@@ -1,9 +1,6 @@
 package org.wecancodeit.columbus.reviewssitefullstack;
 
-import static java.util.Arrays.asList;
-
 import java.util.Collection;
-import java.util.HashSet;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,14 +16,15 @@ public class Category {
 
 	@OneToMany(mappedBy = "category")
 	private Collection<Review> reviews;
-	private String name;
+	private String categoryName;
+	private String description;
 
 	public Category() {
 	}
 
-	public Category(String name, Review reviews) {
-		this.name = name;
-		this.reviews = new HashSet<>(asList(reviews));
+	public Category(String categoryName, String description) {
+		this.categoryName = categoryName;
+		this.description = description;
 	}
 
 	public Collection<Review> getReviews() {
@@ -37,8 +35,12 @@ public class Category {
 		return id;
 	}
 
-	public String getName() {
-		return name;
+	public String getCategoryName() {
+		return categoryName;
+	}
+
+	public String getDescription() {
+		return description;
 	}
 
 	@Override
@@ -56,5 +58,4 @@ public class Category {
 		}
 		return id == ((Category) obj).id;
 	}
-
 }
