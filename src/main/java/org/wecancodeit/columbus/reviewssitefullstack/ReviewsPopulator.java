@@ -48,12 +48,12 @@ public class ReviewsPopulator implements CommandLineRunner {
 		tag13 = tagRepo.save(tag13);
 		Tag tag14 = new Tag("Samurai");
 		tag14 = tagRepo.save(tag14);
-		Tag tag13 = new Tag("School");
-		tag13 = tagRepo.save(tag13);
-		Tag tag14 = new Tag("Shounen");
-		tag14 = tagRepo.save(tag14);
-		Tag tag15 = new Tag("Super Powers");
+		Tag tag15 = new Tag("School");
 		tag15 = tagRepo.save(tag15);
+		Tag tag16 = new Tag("Shounen");
+		tag16 = tagRepo.save(tag16);
+		Tag tag17 = new Tag("Super Powers");
+		tag17 = tagRepo.save(tag17);
 
 		Review review = reviewRepo.save(new Review("Java One", "imageUrl", "Description", tag1, tag2));
 
