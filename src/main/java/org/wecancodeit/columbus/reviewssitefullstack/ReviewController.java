@@ -19,16 +19,16 @@ public class ReviewController {
 	@Resource
 	private TagRepository tagRepo;
 
-	@RequestMapping(value = "reviews")
-	public String getAllReviews(Model model) {
-		model.addAttribute("reviews", reviewRepo.findAll());
-		return "reviews";
+	@RequestMapping(value = "categories")
+	public String getAllCategories(Model model) {
+		model.addAttribute("categories", categoryRepo.findAll());
+		return "categories";
 	}
 
-	@RequestMapping("review")
-	public String getAReview(@RequestParam Long id, Model model) {
-		model.addAttribute("reviews", reviewRepo.findOne(id));
-		return "review";
+	@RequestMapping("category")
+	public String getACategory(@RequestParam Long id, Model model) {
+		model.addAttribute("category", categoryRepo.findOne(id));
+		return "category";
 	}
 
 }

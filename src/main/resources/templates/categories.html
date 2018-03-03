@@ -8,10 +8,10 @@
 		<h1>Categories</h1>
 	</header>
 
-	<article th:each="review: ${reviews}">
+	<article th:each="category: ${categories}">
 		<ul>
-			<li><h3><a th:href="@{/review(id=${review.id})}" th:text="${review.category}"></a></h3></li>
-					<p th:text="${review.tag}"/>
+			<li><h3><a th:href="@{/category(id=${category.id})}" th:text="${category.categoryName}"></a></h3></li>
+					<!-- <p th:text="${category.tag}"/> -->
 		</ul>
 	</article>
 

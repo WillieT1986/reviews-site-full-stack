@@ -18,14 +18,12 @@ public class Category {
 	private Collection<Review> reviews;
 
 	private String categoryName;
-	// private String description;
 
 	public Category() {
 	}
 
 	public Category(String categoryName) {
 		this.categoryName = categoryName;
-		// this.description = description;
 	}
 
 	public Collection<Review> getReviews() {
@@ -39,10 +37,6 @@ public class Category {
 	public String getCategoryName() {
 		return categoryName;
 	}
-
-	// public String getDescription() {
-	// return description;
-	// }
 
 	@Override
 	public int hashCode() {
