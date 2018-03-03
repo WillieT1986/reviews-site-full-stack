@@ -4,7 +4,15 @@
 	<title>Category</title>
 </head>
 <body>
-	<h1>Anime</h1>
+	<header th:each="review: ${reviews}">
+		<h1 th:text="${review.category}"></h1>
+	</header>
+
+	<article th:each="review: ${reviews}">
+		<h2>Category</h2>
+			<p th:text="${review.category}" />
+	<a href="http://localhost:8080/reviews">Back to home</a>
+	</article>
 
 </body>
 </html>

@@ -4,7 +4,16 @@
 	<title>Categories</title>
 </head>
 <body>
-	<h1>Categories</h1>
+	<header>
+		<h1>Categories</h1>
+	</header>
+
+	<article th:each="review: ${reviews}">
+		<ul>
+			<li><h3><a th:href="@{/review(id=${review.id})}" th:text="${review.category}"></a></h3></li>
+					<p th:text="${review.tag}"/>
+		</ul>
+	</article>
 
 </body>
 </html>
