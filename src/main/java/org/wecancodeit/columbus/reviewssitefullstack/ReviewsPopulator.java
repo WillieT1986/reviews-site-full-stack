@@ -22,11 +22,9 @@ public class ReviewsPopulator implements CommandLineRunner {
 
 		// Default Tags for current Anime listed in this review. Is there a better way
 		// for this???
-		Tag tag1 = new Tag("Action");
-		tag1 = tagRepo.save(tag1);
+		Tag tag1 = tagRepo.save(new Tag("Action"));
 
-		Tag tag2 = new Tag("Adventure");
-		tag2 = tagRepo.save(tag2);
+		Tag tag2 = createTag("Adventure");
 
 		Tag tag3 = new Tag("Comedy");
 		tag3 = tagRepo.save(tag3);
@@ -74,8 +72,13 @@ public class ReviewsPopulator implements CommandLineRunner {
 		tag17 = tagRepo.save(tag17);
 
 		// How to remove the yellow lines from review and anime???
-		Review review = reviewRepo.save(new Review("Anime One", "imageUrl", "Description", tag1, tag2));
+		reviewRepo.save(new Review("Anime One", "imageUrl", "Description", tag1, tag2));
 
-		Category anime = categoryRepo.save(new Category("Anime", "Description of Anime Goes Here..."));
+		categoryRepo.save(new Category("Anime", "Description of Anime Goes Here..."));
+	}
+
+	private Tag createTag(String name) {
+		Tag t = new Tag(name);
+		return tagRepo.save(t);
 	}
 }
