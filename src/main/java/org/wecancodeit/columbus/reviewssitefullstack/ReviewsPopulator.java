@@ -50,7 +50,6 @@ public class ReviewsPopulator implements CommandLineRunner {
 		reviewRepo.save(
 				new Review(anime, "Anime Six", "imageUrl", "Description6", tag1, tag5, tag9, tag11, tag13, tag14));
 		reviewRepo.save(new Review(anime, "Anime Seven", "imageUrl", "Description7", tag6, tag15, tag16));
-
 	}
 
 	private Tag createTag(String name) {
