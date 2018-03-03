@@ -19,9 +19,6 @@ public class ReviewsPopulator implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-
-		// Default Tags for current Anime listed in this review. Is there a better way
-		// for this???
 		Tag tag1 = createTag("Action");
 		Tag tag2 = createTag("Adventure");
 		Tag tag3 = createTag("Comedy");
@@ -40,7 +37,6 @@ public class ReviewsPopulator implements CommandLineRunner {
 		Tag tag16 = createTag("Shounen");
 		Tag tag17 = createTag("Super Powers");
 
-		// How to remove the yellow lines from review and anime???
 		reviewRepo.save(new Review("Anime One", "imageUrl", "Description", tag1, tag2));
 
 		categoryRepo.save(new Category("Anime", "Description of Anime Goes Here..."));
