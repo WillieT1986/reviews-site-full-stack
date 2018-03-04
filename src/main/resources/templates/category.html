@@ -15,11 +15,18 @@
 
 
 		<main>
+
+			<section>
+				<img src="./images/anime.jpg" alt="Anime" width="500px" height="500px" /> 
+			</section>
+
+			<section class="categoryLi">
 			<article th:each="category: ${category.reviews}">
 				<ul>
 					<li><h3><a th:href="@{/review(id=${category.id})}" th:text="${category.title}"></a></h3></li>
 				</ul>
 			</article>
+			</section>
 		</main>
 		<footer>
 			<h2><a href="http://localhost:8080/categories">Back to home</a></h2>
