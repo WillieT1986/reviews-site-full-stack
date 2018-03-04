@@ -4,7 +4,7 @@
 	<title>Tags</title>
 </head>
 <body>
-	<h1>Anime Associated to Tag: [Tag]</h1>
+	<h1>Should Be Tag: <a th:href="@{/tag(id=${tag.id})}" th:text="${tags.tag}"></a></h1>
 
 </body>
 </html>
