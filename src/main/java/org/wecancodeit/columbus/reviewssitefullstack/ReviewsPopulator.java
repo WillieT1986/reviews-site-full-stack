@@ -19,7 +19,7 @@ public class ReviewsPopulator implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Category anime = createCategory("Anime");
+		Category anime = createCategory("Anime Reviews");
 
 		Tag tag1 = createTag("Action");
 		Tag tag2 = createTag("Adventure");
