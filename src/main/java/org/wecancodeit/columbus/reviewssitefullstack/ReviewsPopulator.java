@@ -79,7 +79,12 @@ public class ReviewsPopulator implements CommandLineRunner {
 						+ " Himura who becomes one of the most deadliest assassins of his time earning him the nickname 'Hitokiri Battousai.' Locked between justice and corruption, Kenshin must find "
 						+ "a way to shoulder the weight as the Nation rest falls to him. ",
 				tag1, tag5, tag9, tag11, tag13, tag14));
-		reviewRepo.save(new Review(anime, "Anime Seven", "./images/", "Description7", tag6, tag15, tag16));
+		reviewRepo.save(new Review(anime, "Shokugeki no Souma", "./images/foodwars.jpg",
+				"Trained since birth along with being raised in a Diner, Souma Yukihira, is suddenly told by his Father that he will be attending an Elite School that shapes and molds students to be"
+						+ " the best Chefs in the world. Through this vigorous training school. As a transfer student, he declares that he will be the top student that paints a target on his back."
+						+ " Shokugeki, that is what is used to prove his is better and at this Elite School. Is the only way to move to the top. Yukihira faces many obstacles as he shoots for the top while"
+						+ " those who revere his Father are unaware that Yukihira is his son while his son has no idea how famous his Father truly is. ",
+				tag6, tag15, tag16));
 	}
 
 	private Tag createTag(String name) {
