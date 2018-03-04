@@ -39,8 +39,13 @@ public class ReviewsPopulator implements CommandLineRunner {
 		Tag tag16 = createTag("Shounen");
 		Tag tag17 = createTag("Super Powers");
 
-		reviewRepo.save(
-				new Review(anime, "D.Gray-man", "imageUrl", "Description1", tag1, tag2, tag3, tag4, tag16, tag17));
+		reviewRepo.save(new Review(anime, "D.Gray-man", "./images/dman.jpg",
+				"The Millenium Earl, a master of exploits while utilizing the souls of the dead trapped within Akuma plots the Destruction of the"
+						+ " World. Under General Cross, the main protagonist Allen Walker uses his anti-Akuma weapon known as an innocence to fight against"
+						+ " the Millenium Earls’ Akuma in order to release their souls and free them from their entrapment so they may live in peace once"
+						+ " and for all. At the same time, Allen Walker along with his friends must all land together in order to prevent the Destruction"
+						+ " of the World.",
+				tag1, tag2, tag3, tag4, tag16, tag17));
 		reviewRepo
 				.save(new Review(anime, "Anime Two", "imageUrl", "Description2", tag1, tag2, tag3, tag7, tag10, tag16));
 		reviewRepo.save(new Review(anime, "Anime Three", "imageUrl", "Description3", tag1, tag2, tag3, tag5, tag7,
