@@ -72,8 +72,13 @@ public class ReviewsPopulator implements CommandLineRunner {
 						+ " how not only himself but those trapped with him on how to escape back to the real world. Will Shiroe be able to do it or is there more to it and a reason for"
 						+ " these brave adventurers being trapped within Elder Tails?",
 				tag1, tag2, tag7, tag8, tag10));
-		reviewRepo.save(
-				new Review(anime, "Anime Six", "./images/", "Description6", tag1, tag5, tag9, tag11, tag13, tag14));
+		reviewRepo.save(new Review(anime, "Rurouni Kenshin: Meiji Kenkaku Romantan - Tsuioku-hen",
+				"./images/samuraix.jpg",
+				"The world is a cruel place. During a brutal war in Japan. It is survival of the fittest. Shinta, a young boy who watched his care takes get slain right before his eyes watch"
+						+ " defenslessly as he is capable of doing nothing. At the moment of his own surpmise his attackers are cut down and he is saved by a Master Swordsmen. Shinta is now named Kenshin"
+						+ " Himura who becomes one of the most deadliest assassins of his time earning him the nickname 'Hitokiri Battousai.' Locked between justice and corruption, Kenshin must find "
+						+ "a way to shoulder the weight as the Nation rest falls to him. ",
+				tag1, tag5, tag9, tag11, tag13, tag14));
 		reviewRepo.save(new Review(anime, "Anime Seven", "./images/", "Description7", tag6, tag15, tag16));
 	}
 
