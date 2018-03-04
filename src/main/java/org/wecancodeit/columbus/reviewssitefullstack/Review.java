@@ -8,6 +8,7 @@ import java.util.HashSet;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
@@ -23,8 +24,10 @@ public class Review {
 
 	@ManyToMany
 	private Collection<Tag> tags;
-	private String title;
+
+	@Lob
 	private String description;
+	private String title;
 	private String imageUrl;
 
 	public Review() {
