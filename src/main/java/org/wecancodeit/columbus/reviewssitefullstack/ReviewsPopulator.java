@@ -75,7 +75,7 @@ public class ReviewsPopulator implements CommandLineRunner {
 		reviewRepo.save(new Review(anime, "Rurouni Kenshin: Meiji Kenkaku Romantan - Tsuioku-hen",
 				"./images/samuraix.jpg",
 				"The world is a cruel place. During a brutal war in Japan. It is survival of the fittest. Shinta, a young boy who watched his care takes get slain right before his eyes watch"
-						+ " defenslessly as he is capable of doing nothing. At the moment of his own surpmise his attackers are cut down and he is saved by a Master Swordsmen. Shinta is now named Kenshin"
+						+ " defenselessly as he is capable of doing nothing. At the moment of his own surprise his attackers are cut down and he is saved by a Master Swordsmen. Shinta is now named Kenshin"
 						+ " Himura who becomes one of the most deadliest assassins of his time earning him the nickname 'Hitokiri Battousai.' Locked between justice and corruption, Kenshin must find "
 						+ "a way to shoulder the weight as the Nation rest falls to him. ",
 				tag1, tag5, tag9, tag11, tag13, tag14));
