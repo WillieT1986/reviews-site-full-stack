@@ -5,30 +5,38 @@
 	<link rel="stylesheet" type="text/css" href="./css/style.css" />
 </head>
 
-	<style>
-		img {
-			display: block;
-			max-width: 685px;
-			max-height: 300px;
-			width: auto;
-			height: auto;
-		}
-	</style>
+<style>
+img {
+	display: block;
+	max-width: 685px;
+	max-height: 300px;
+	width: auto;
+	height: auto;
+}
+</style>
 
 <body>
-	<header>
-		<h1 th:text="${review.title}"></h1>
-	</header>
-	
-	<article th:each="reviews: ${review}">
-		<img th:src="${review.imageUrl}" />
-		<h2>Description</h2>
-			<p th:text="${review.description}" />
-		<h4>Tags</h4> <!-- To add th:each"reviews: ${tag}" -->
-			<p><a th:href="@{/tag(id=${review.id})}" th:text="${review.tags}" ></a></p>
-	</article>
-		<a href="http://localhost:8080/categories">Back to Home</a>
-		<a href="http://localhost:8080/category?id=1">Back to Category</a>
-		
+	<div class="container">
+		<header>
+			<h1 th:text="${review.title}"></h1>
+		</header>
+
+		<main>
+			<article th:each="reviews: ${review}">
+				<img th:src="${review.imageUrl}" />
+				<h2>Description</h2>
+				<p th:text="${review.description}"></p>
+				<h4>Tags</h4> <!-- To add th:each"reviews: ${tag}" -->
+				<p><a th:href="@{/tag(id=${review.id})}" th:text="${review.tags}" ></a></p>
+			</article>
+		</main>
+
+		<footer>
+			<h2 class="reviewFootOne"><a href="http://localhost:8080/categories">Back to Home</a></h2>
+			<h2 class="reviewFootTwo"><a href="http://localhost:8080/category?id=1">Back to Category</a></h2>
+		</footer>
+	</div>
+
+
 </body>
 </html>
