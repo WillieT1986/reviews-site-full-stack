@@ -3,19 +3,27 @@
 
 <head>
 	<title>Anime</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
 </head>
 
 <body>
-	<header>
-		<h1 th:text="${category.categoryName}"></h1>
-	</header>
+	<div class="container">
 
-	<article th:each="category: ${category.reviews}">
-		<ul>
-			<li><h3><a th:href="@{/review(id=${category.id})}" th:text="${category.title}"></a></h3></li>
-		</ul>
-	</article>
-		<a href="http://localhost:8080/categories">Back to home</a>
+		<header>
+			<h1 th:text="${category.categoryName}"></h1>
+		</header>
 
+
+		<main>
+			<article th:each="category: ${category.reviews}">
+				<ul>
+					<li><h3><a th:href="@{/review(id=${category.id})}" th:text="${category.title}"></a></h3></li>
+				</ul>
+			</article>
+		</main>
+		<footer>
+			<h2><a href="http://localhost:8080/categories">Back to home</a></h2>
+		</footer>
+	</div>
 </body>
 </html>
