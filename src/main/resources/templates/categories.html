@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head>
 	<title>Categories</title>
 	<link rel="stylesheet" type="text/css" href="./css/style.css" />
 </head>
-
 <body>
 	<div class="container">
-
 		<header>
 			<h1>List of Categories to Review</h1>
 		</header>
-
 		<main>
 			<section class="categoriesLi">
 				<article th:each="category: ${categories}">
@@ -22,11 +18,9 @@
 				</article>
 			</section>
 		</main>
-
 		<footer>
-			<smal>Weekend 7 Project</smal>
+			<small>Weekend 7 Project</small>
 		</footer>
-
 	</div>
 </body>
 </html>
