@@ -39,9 +39,6 @@ public class Review {
 	}
 
 	public Collection<Tag> getTags() {
-		for (Tag t : tags) {
-			t = tags;
-		}
 		return tags;
 	}
 
