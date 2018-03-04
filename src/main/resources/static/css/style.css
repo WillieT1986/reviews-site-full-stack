@@ -13,7 +13,7 @@
 
 header {
 	display: flex;
-	grid-column: 1 / -1;
+
 	align-items: center;
 	justify-content: center;
 	background-color: lightgray;
@@ -25,15 +25,19 @@ main{
 }
 
 ul {
-	display: flex;
 	padding: 5px;
 	margin: 3px;
 }
 
 ul li {
-	display: flex;
 	padding: 5px;
 	margin: 3px;
+}
+
+.categoriesLi {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 footer {

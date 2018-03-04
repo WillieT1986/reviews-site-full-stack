@@ -12,12 +12,15 @@
 		<header>
 			<h1>List of Categories to Review</h1>
 		</header>
+
 		<main>
-			<article th:each="category: ${categories}">
-				<ul>
-					<li><h3><a th:href="@{/category(id=${category.id})}" th:text="${category.categoryName}"></a></h3></li>
-				</ul>
-			</article>
+			<section class="categoriesLi">
+				<article th:each="category: ${categories}">
+					<ul>
+						<li><h3><a th:href="@{/category(id=${category.id})}" th:text="${category.categoryName}"></a></h3></li>
+					</ul>
+				</article>
+			</section>
 		</main>
 
 		<footer>

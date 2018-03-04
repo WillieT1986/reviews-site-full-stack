@@ -26,14 +26,14 @@ img {
 				<img th:src="${review.imageUrl}" />
 				<h2>Description</h2>
 				<p th:text="${review.description}"></p>
-				<h4>Tags</h4> <!-- To add th:each"reviews: ${tag}" -->
+				<h4>Tags</h4>
 				<p><a th:each="tag: ${review.tags}"	th:href="@{/tag(id=${tag.id})}" th:text="${tag}" ></a></p>
 			</article>
 		</main>
 
 		<footer>
-			<h2 class="reviewFootOne"><a href="http://localhost:8080/categories">Back to Home</a></h2>
-			<h2 class="reviewFootTwo"><a href="http://localhost:8080/category?id=1">Back to Category</a></h2>
+			<h2><a href="http://localhost:8080/categories">Back to Home</a></h2>
+			<h2><a href="http://localhost:8080/category?id=1">Back to Category</a></h2>
 		</footer>
 	</div>
 
