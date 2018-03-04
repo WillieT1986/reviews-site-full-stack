@@ -27,7 +27,7 @@ img {
 				<h2>Description</h2>
 				<p th:text="${review.description}"></p>
 				<h4>Tags</h4> <!-- To add th:each"reviews: ${tag}" -->
-				<p><a th:href="@{/tag(id=${review.id})}" th:text="${review.tags}" ></a></p>
+				<p><a th:each="tag: ${review.tags}"	th:href="@{/tag(id=${tag.id})}" th:text="${tag}" ></a></p>
 			</article>
 		</main>
 
@@ -36,7 +36,6 @@ img {
 			<h2 class="reviewFootTwo"><a href="http://localhost:8080/category?id=1">Back to Category</a></h2>
 		</footer>
 	</div>
-
 
 </body>
 </html>
