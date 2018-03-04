@@ -23,7 +23,7 @@
 		<img th:src="${review.imageUrl}" />
 		<h2>Description</h2>
 			<p th:text="${review.description}" />
-		<h4>Tags</h4>
+		<h4>Tags</h4> <!-- To add th:each"reviews: ${tag}" -->
 			<p><a th:href="@{/tag(id=${review.id})}" th:text="${review.tags}" ></a></p>
 	</article>
 		<a href="http://localhost:8080/categories">Back to Home</a>

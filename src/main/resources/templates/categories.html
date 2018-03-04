@@ -3,9 +3,12 @@
 
 <head>
 	<title>Categories</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
 </head>
 
 <body>
+	<div class="container">
+
 	<header>
 		<h1>List of Categories to Review</h1>
 	</header>
@@ -15,6 +18,9 @@
 			<li><h3><a th:href="@{/category(id=${category.id})}" th:text="${category.categoryName}"></a></h3></li>
 		</ul>
 	</article>
+	
+	<footer>Weekend 7 Project</footer>
 
+	</div>
 </body>
 </html>
