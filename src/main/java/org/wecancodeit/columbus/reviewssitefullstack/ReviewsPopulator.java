@@ -53,8 +53,13 @@ public class ReviewsPopulator implements CommandLineRunner {
 						+ "Dark Wizard in the shadows. A Gate the brings Dragons from the past lay waste to the lands as these two young Wizards along with their "
 						+ "Guild save the Kingdom from complete annihilation.",
 				tag1, tag2, tag3, tag7, tag10, tag16));
-		reviewRepo.save(new Review(anime, "Anime Three", "./images/", "Description3", tag1, tag2, tag3, tag5, tag7,
-				tag10, tag11, tag16));
+		reviewRepo.save(new Review(anime, "Fullmetal Alchemist: Brotherhood", "./images/fullmetal.jpg",
+				"The Law of Equivalent Exchange: \"In order for something to be obtained, something of equal value must be lost.\" This is law for Alchemist that "
+						+ "two Brothers by the names of Edward and Alphonse Elric ignored while trying to bring their Mother back to life. The younger Brother lost his physical"
+						+ " body while his old Brother lost his arm saving his brother’s life by placing his spiritual form within a suit of armor. They travel around seeking"
+						+ " the philosopher's stone while at the same time unraveling their Countries darkest secrets. Between the search for a serial killer and time, the two"
+						+ " brother’s hold onto doubt on whether or not they can fully become human again.",
+				tag1, tag2, tag3, tag5, tag7, tag10, tag11, tag16));
 		reviewRepo.save(new Review(anime, "Anime Four", "./images/", "Description4", tag1, tag2, tag7, tag12));
 		reviewRepo.save(new Review(anime, "Anime Five", "./images/", "Description5", tag1, tag2, tag7, tag8, tag10));
 		reviewRepo.save(
