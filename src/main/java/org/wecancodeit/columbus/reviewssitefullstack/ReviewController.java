@@ -54,5 +54,4 @@ public class ReviewController {
 		model.addAttribute("tag", tagRepo.findOne(id));
 		return "tag";
 	}
-
 }
