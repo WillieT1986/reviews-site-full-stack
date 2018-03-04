@@ -3,3 +3,43 @@
 	margin: 0;
 	padding: 0;
 }
+
+.container{
+	width:100%;
+	display: grid;
+	grid-template-rows: 40px auto 25px;
+}
+
+header {
+	display: flex;
+	grid-column: 1 / -1;
+	align-items: center;
+	justify-content: center;
+	background-color: lightgray;
+	border-bottom: 1px solid black;
+}
+
+main{
+
+}
+
+ul {
+	display: flex;
+	padding: 5px;
+	margin: 3px;
+}
+
+ul li {
+	display: flex;
+	padding: 5px;
+	margin: 3px;
+}
+
+footer {
+	display: flex;
+	grid-column: 1 / -1;	
+	align-items: center;
+	justify-content: center;
+	background-color: lightgray;
+	border-top: 1px solid black;
+}
