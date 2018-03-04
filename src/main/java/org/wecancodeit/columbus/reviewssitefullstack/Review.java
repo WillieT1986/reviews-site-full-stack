@@ -50,6 +50,14 @@ public class Review {
 		return id;
 	}
 
+	public String getDescription() {
+		return description;
+	}
+
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
 	@Override
 	public int hashCode() {
 		return ((Long) id).hashCode();
@@ -66,11 +74,4 @@ public class Review {
 		return id == ((Review) obj).id;
 	}
 
-	public String getDescription() {
-		return description;
-	}
-
-	public String getImageUrl() {
-		return imageUrl;
-	}
 }

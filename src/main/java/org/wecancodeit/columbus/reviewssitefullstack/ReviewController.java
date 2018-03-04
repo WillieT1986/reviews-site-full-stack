@@ -43,10 +43,16 @@ public class ReviewController {
 		return "category";
 	}
 
-	@RequestMapping("tags")
-	public String getAllTags(@RequestParam Iterable<Long> id, Model model) {
-		model.addAttribute("tags", tagRepo.findAll(id));
+	@RequestMapping(value = "tags")
+	public String getAllTags(Model model) {
+		model.addAttribute("tags", tagRepo.findAll());
 		return "tags";
+	}
+
+	@RequestMapping("tag")
+	public String getATag(@RequestParam Long id, Model model) {
+		model.addAttribute("tag", tagRepo.findOne(id));
+		return "tag";
 	}
 
 }

@@ -10,7 +10,6 @@
 		<h1 th:text="${category.categoryName}"></h1>
 	</header>
 
-	
 	<article th:each="category: ${category.reviews}">
 		<ul>
 			<li><h3><a th:href="@{/review(id=${category.id})}" th:text="${category.title}"></a></h3></li>
