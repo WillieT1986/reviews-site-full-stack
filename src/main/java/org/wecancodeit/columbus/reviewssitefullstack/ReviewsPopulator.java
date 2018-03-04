@@ -46,15 +46,20 @@ public class ReviewsPopulator implements CommandLineRunner {
 						+ " and for all. At the same time, Allen Walker along with his friends must all land together in order to prevent the Destruction"
 						+ " of the World.",
 				tag1, tag2, tag3, tag4, tag16, tag17));
-		reviewRepo
-				.save(new Review(anime, "Anime Two", "imageUrl", "Description2", tag1, tag2, tag3, tag7, tag10, tag16));
-		reviewRepo.save(new Review(anime, "Anime Three", "imageUrl", "Description3", tag1, tag2, tag3, tag5, tag7,
+		reviewRepo.save(new Review(anime, "Fairy Tail (2014)", "./images/fairy.jpg",
+				"The #1 Wizard Guild isn’t only known for being Destructive but also known for their kindness and being humble towards the people. "
+						+ "They love a good fight as they go all out destroying their enemies more than what they need to. Natsu Dragneel along with the Ice Making "
+						+ "Wizard Gray Fullbuster have just devastated the Championship and as they draw nearer to victory. It is all abruptly ended by a "
+						+ "Dark Wizard in the shadows. A Gate the brings Dragons from the past lay waste to the lands as these two young Wizards along with their "
+						+ "Guild save the Kingdom from complete annihilation.",
+				tag1, tag2, tag3, tag7, tag10, tag16));
+		reviewRepo.save(new Review(anime, "Anime Three", "./images/", "Description3", tag1, tag2, tag3, tag5, tag7,
 				tag10, tag11, tag16));
-		reviewRepo.save(new Review(anime, "Anime Four", "imageUrl", "Description4", tag1, tag2, tag7, tag12));
-		reviewRepo.save(new Review(anime, "Anime Five", "imageUrl", "Description5", tag1, tag2, tag7, tag8, tag10));
+		reviewRepo.save(new Review(anime, "Anime Four", "./images/", "Description4", tag1, tag2, tag7, tag12));
+		reviewRepo.save(new Review(anime, "Anime Five", "./images/", "Description5", tag1, tag2, tag7, tag8, tag10));
 		reviewRepo.save(
-				new Review(anime, "Anime Six", "imageUrl", "Description6", tag1, tag5, tag9, tag11, tag13, tag14));
-		reviewRepo.save(new Review(anime, "Anime Seven", "imageUrl", "Description7", tag6, tag15, tag16));
+				new Review(anime, "Anime Six", "./images/", "Description6", tag1, tag5, tag9, tag11, tag13, tag14));
+		reviewRepo.save(new Review(anime, "Anime Seven", "./images/", "Description7", tag6, tag15, tag16));
 	}
 
 	private Tag createTag(String name) {
