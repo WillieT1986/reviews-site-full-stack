@@ -8,14 +8,13 @@
 		<h1 th:text="${review.title}"></h1>
 	</header>
 	
-	<!-- <article th:each="review: ${reviews}">
-		<img th:src="${review.imageURL}" />
+	<article th:each="reviews: ${review}">
+		<img th:src="${review.imageUrl}" />
 		<h2>Description</h2>
 			<p th:text="${review.description}" />
 		<h4>Tags</h4>
-			<p th:text="${review.tag1}" h:text="${review.tag2}" />
-	</article> -->
+			<p th:text="${review.tag}" />
+	</article>
 		<a href="http://localhost:8080/categories">Back to home</a>
-
 </body>
 </html>
