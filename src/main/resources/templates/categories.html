@@ -9,17 +9,20 @@
 <body>
 	<div class="container">
 
-	<header>
-		<h1>List of Categories to Review</h1>
-	</header>
+		<header>
+			<h1>List of Categories to Review</h1>
+		</header>
+		<main>
+			<article th:each="category: ${categories}">
+				<ul>
+					<li><h3><a th:href="@{/category(id=${category.id})}" th:text="${category.categoryName}"></a></h3></li>
+				</ul>
+			</article>
+		</main>
 
-	<article th:each="category: ${categories}">
-		<ul>
-			<li><h3><a th:href="@{/category(id=${category.id})}" th:text="${category.categoryName}"></a></h3></li>
-		</ul>
-	</article>
-	
-	<footer>Weekend 7 Project</footer>
+		<footer>
+			<smal>Weekend 7 Project</smal>
+		</footer>
 
 	</div>
 </body>
