@@ -60,7 +60,12 @@ public class ReviewsPopulator implements CommandLineRunner {
 						+ " the philosopher's stone while at the same time unraveling their Countries darkest secrets. Between the search for a serial killer and time, the two"
 						+ " brother’s hold onto doubt on whether or not they can fully become human again.",
 				tag1, tag2, tag3, tag5, tag7, tag10, tag11, tag16));
-		reviewRepo.save(new Review(anime, "Anime Four", "./images/", "Description4", tag1, tag2, tag7, tag12));
+		reviewRepo.save(new Review(anime, "Gate: Jieitai Kanochi nite, Kaku Tatakaeri", "./images/gate.jpg",
+				"Youji Itami, an Otaku who’s an Office in the JSDF is traveling through Ginza and enroute to a doujin  convention when suddenly a portal leading to another world"
+						+ " opens up. With hundreds, if not thousands if medieval troops clad in armor come rushing through to invade Earth. Three months go by and Youji along with a"
+						+ " special team is being tasked with exploring the otherside of the Gate to make peace and to learn the ways of the otherside where he comes across a young mage,"
+						+ " demi-goddess, an elf and a princess to the other Kingdom. If failure, there will surely be more blood spilled.",
+				tag1, tag2, tag7, tag12));
 		reviewRepo.save(new Review(anime, "Anime Five", "./images/", "Description5", tag1, tag2, tag7, tag8, tag10));
 		reviewRepo.save(
 				new Review(anime, "Anime Six", "./images/", "Description6", tag1, tag5, tag9, tag11, tag13, tag14));
