@@ -73,5 +73,4 @@ public class Review {
 	public String getImageUrl() {
 		return imageUrl;
 	}
-
 }
