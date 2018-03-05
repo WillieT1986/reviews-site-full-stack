@@ -118,7 +118,9 @@ main{
 }
 
 .review-section-two {
-
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 /*tag.html end*/
