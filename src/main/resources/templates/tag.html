@@ -11,13 +11,13 @@
 		</header>
 
 		<main>
-			<section>
+			<section class="review-section-one">
 				<article>
 					<h2>Anime associated with <strong th:text="${tag.name}"></strong> </h2>
 				</article>
 			</section>
 
-			<section th:each="tag: ${tag.reviews}">
+			<section class="review-section-two" th:each="tag: ${tag.reviews}">
 				<ul>
 					<li><h4><a th:href="@{/review(id=${tag.id})}" th:text="${tag.title}"></a></h4></li>
 				</ul>
@@ -30,7 +30,7 @@
 				<h3><a href="http://localhost:8080/category?id=1">Back to Category</a></h3>
 			</section>
 		</footer>
-		
+
 	</div>
 </body>
 </html>
