@@ -17,7 +17,7 @@
 		
 		<section th:each="review: ${tag.reviews}">
 			<ul>
-				<li><h4><a th:href="@{/tag(id=${tag.id})}" th:text="${review.title}"></a></h4></li>
+				<li><h4><a th:href="@{/tag(id=${review.id})}" th:text="${review.title}"></a></h4></li>
 			</ul>
 		</section>
 	</main>
