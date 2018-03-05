@@ -112,6 +112,14 @@ main{
 /*review.html end*/
 /*tag.html beginning*/
 
+.review-section-one {
+	display: flex;
+	justify-content: center;
+}
+
+.review-section-two {
+
+}
 
 /*tag.html end*/
 
