@@ -61,22 +61,24 @@ ul li {
 	justify-content: flex-start;
 	border-radius: 5px;
 	border: 1px solid black;
-	margin-top: 5px;
-	margin-bottom: 5px;
 }
 
 .review-main h2 {
 	display: flex;
 	align-items: center;
-	justify-content: center;	
+	justify-content: flex-start;	
 }
 
 .review-main p {
 	padding: 5px;
 }
 
+.review-tags {
+	display: flex;
+	justify-content: space-between;
+}
+
 .review-photo {
-	margin-top: 10%;
 	padding: 5px;
 }
 
