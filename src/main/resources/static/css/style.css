@@ -24,18 +24,6 @@ main{
 	background-color: lightblue;
 }
 
-ul {
-	display: flex;
-	padding: 5px;
-	margin: 3px;
-}
-
-ul li {
-	display: flex;
-	padding: 5px;
-	margin: 3px;
-}
-
 /*categories.html beginning*/
  .categoriesLi {
  	display: flex;
@@ -43,14 +31,31 @@ ul li {
  	justify-content: center;
  }
 
+.categoriesLi ul {
+	display: flex;
+	padding: 5px;
+	margin: 3px;
+}
+
+.categoriesLi ul li {
+	display: flex;
+	padding: 5px;
+	margin: 3px;
+}
 /*categoryies.html end*/
 /*category.html beginning*/
 
-.categoryImage {
+.category-image {
 	display: flex;
 	justify-content: center;
 }
 
+.category-section-two {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start; ; 
+}
 
 
 /*category.html end*/
@@ -97,8 +102,3 @@ footer {
 	background-color: lightgray;
 	border-top: 1px solid black;
 }
-
-
-
-
-
