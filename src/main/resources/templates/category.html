@@ -16,16 +16,17 @@
 
 		<main>
 
-			<section>
-				<img src="./images/anime.jpg" alt="Anime" width="500px" height="500px" /> 
-			</section>
-
 			<section class="categoryLi">
-			<article th:each="category: ${category.reviews}">
-				<ul>
-					<li><h3><a th:href="@{/review(id=${category.id})}" th:text="${category.title}"></a></h3></li>
-				</ul>
-			</article>
+				<article>
+					<img src="./images/anime.jpg" alt="Anime" width="650px" height="500px" /> 
+				</article>
+				<article th:each="category: ${category.reviews}">
+					
+					<ul>
+						<li><p><a th:href="@{/review(id=${category.id})}" th:text="${category.title}"></a></p></li>
+					</ul>
+					<p>Tags</p><p><a th:each="tag: ${category.tags}" th:href="@{/tag(id=${tag.id})}" th:text="${tag}" ></a></p>
+				</article>
 			</section>
 		</main>
 		<footer>
