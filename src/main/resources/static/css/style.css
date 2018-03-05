@@ -37,7 +37,7 @@ main{
 	margin: 3px;
 }
 
-.categoriesLi ul li {
+.categoriesLi li {
 	display: flex;
 	padding: 5px;
 	margin: 3px;
@@ -57,13 +57,22 @@ main{
 
 }
 
-/*.category-section-two {
+.category-section-two {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center; 
+	margin: 10px;
+}
+
+.category-section-two ul {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start; ; 
 }
-*/
+
+.category-section-two li {
+	display: flex;
+}
 
 /*category.html end*/
 /*review.html beginning*/
