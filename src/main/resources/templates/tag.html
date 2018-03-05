@@ -5,30 +5,32 @@
 	<link rel="stylesheet" type="text/css" href="./css/style.css" />
 </head>
 <body>
-	<header>
-		<h1 th:text="${tag.name}"></h1>
-	</header>
-	
-	<main>
-		<section>
-			<article>
-				<h2>Anime associated with <strong th:text="${tag.name}"></strong> </h2>
-			</article>
-		</section>
-		
-		<section th:each="tag: ${tag.reviews}">
-			<ul>
-				<li><h4><a th:href="@{/review(id=${tag.id})}" th:text="${tag.title}"></a></h4></li>
-			</ul>
-		</section>
-	</main>
-	
-	<footer>
-		<p>
-			<a href="http://localhost:8080/categories">Back to Home</a>
-			<a href="http://localhost:8080/category?id=1">Back to Category</a>
-		</p>
-	</footer>
+	<div class="container">	
+		<header>
+			<h1 th:text="${tag.name}"></h1>
+		</header>
 
+		<main>
+			<section>
+				<article>
+					<h2>Anime associated with <strong th:text="${tag.name}"></strong> </h2>
+				</article>
+			</section>
+
+			<section th:each="tag: ${tag.reviews}">
+				<ul>
+					<li><h4><a th:href="@{/review(id=${tag.id})}" th:text="${tag.title}"></a></h4></li>
+				</ul>
+			</section>
+		</main>
+
+		<footer>
+			<section>
+				<h3><a href="http://localhost:8080/categories">Back to Home</a></h3>
+				<h3><a href="http://localhost:8080/category?id=1">Back to Category</a></h3>
+			</section>
+		</footer>
+		
+	</div>
 </body>
 </html>
