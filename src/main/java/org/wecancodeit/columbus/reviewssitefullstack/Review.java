@@ -76,5 +76,4 @@ public class Review {
 		}
 		return id == ((Review) obj).id;
 	}
-
 }

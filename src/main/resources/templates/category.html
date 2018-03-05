@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head>
 	<title>Anime</title>
 	<link rel="stylesheet" type="text/css" href="./css/style.css" />
 </head>
-
 <body>
 	<div class="container">
-
 		<header>
 			<h1 th:text="${category.categoryName}"></h1>
 		</header>
-
-
 		<main>
 			<section class="category-section-one">
 				<article>
 					<img src="./images/anime.jpg" alt="Anime"/> 
 				</article>
 			</section>
-
 			<section class="category-section-two">
 				<article th:each="category: ${category.reviews}">
 					<ul class="categoryUl">
@@ -29,9 +23,7 @@
 					</ul>
 				</article>
 			</section>
-
 		</main>
-
 		<footer>
 			<h2><a href="http://localhost:8080/categories">Back to home</a></h2> 
 		</footer>

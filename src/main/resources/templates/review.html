@@ -4,29 +4,23 @@
 	<title>Review of Anime</title>
 	<link rel="stylesheet" type="text/css" href="./css/style.css" />
 </head>
-
 <body>
 	<div class="container">
 		<header>
 			<h1 th:text="${review.title}"></h1>
 		</header>
-
 		<main>
-
 			<section class="review-main">
 				<article class="review-photo" th:each="reviews: ${review}">
 					<img th:src="${review.imageUrl}" />
 				</article>
-
 				<article>
 					<h2>Description</h2>
 					<p th:text="${review.description}"></p>
 					<p class="review-tags"><small>Tags:  <a th:each="tag: ${review.tags}"	th:href="@{/tag(id=${tag.id})}" th:text="${tag}" ></a></small></p>
 				</article>
 			</section>
-
 		</main>
-
 		<footer>
 			<section>
 				<h3><a href="http://localhost:8080/categories">Back to Home</a></h3>
@@ -34,6 +28,5 @@
 			</section>
 		</footer>
 	</div>
-
 </body>
 </html>
