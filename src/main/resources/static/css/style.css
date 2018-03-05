@@ -42,7 +42,9 @@ ul li {
 
 .categoryLi {
 	display: flex;
-	justify-content: flex-start;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 	border-radius: 5px;
 	border: 1px solid black;
 	margin-top: 5px;
@@ -54,6 +56,9 @@ ul li {
 }
 
 .categoryImage {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin-top: 0.5%;
 	padding: 5px;
 }
