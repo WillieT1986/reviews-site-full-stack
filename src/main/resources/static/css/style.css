@@ -45,18 +45,25 @@ main{
 /*categoryies.html end*/
 /*category.html beginning*/
 
-.category-image {
+.category-section-one {
 	display: flex;
+	flex-direction: row;
 	justify-content: center;
+	align-items: center;
 }
 
-.category-section-two {
+.category-section-one img {
+	display: flex;
+
+}
+
+/*.category-section-two {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start; ; 
 }
-
+*/
 
 /*category.html end*/
 /*review.html beginning*/

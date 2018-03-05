@@ -15,13 +15,13 @@
 
 
 		<main>
-			<section class="categoryImage">
+			<section class="category-section-one">
 				<article>
-					<img src="./images/anime.jpg" alt="Anime" width="650px" height="500px" /> 
+					<img src="./images/anime.jpg" alt="Anime"/> 
 				</article>
 			</section>
 
-			<section>
+			<section class="category-section-two">
 				<article th:each="category: ${category.reviews}">
 					<ul class="categoryUl">
 						<li><h4><a th:href="@{/review(id=${category.id})}" th:text="${category.title}"></a></h4></li>
