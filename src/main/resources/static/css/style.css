@@ -63,6 +63,7 @@ main{
 	justify-content: space-around;
 	align-items: center; 
 	margin: 10px;
+	padding-top: 20px;
 }
 
 .category-section-two ul {
@@ -109,6 +110,10 @@ main{
 }
 
 /*review.html end*/
+/*tag.html beginning*/
+
+
+/*tag.html end*/
 
 footer {
 	display: flex;
