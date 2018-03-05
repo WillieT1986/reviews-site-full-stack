@@ -25,11 +25,11 @@ main{
 }
 
 /*categories.html beginning*/
- .categoriesLi {
- 	display: flex;
- 	align-items: center;
- 	justify-content: center;
- }
+.categoriesLi {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
 .categoriesLi ul {
 	display: flex;
@@ -119,8 +119,17 @@ main{
 
 .review-section-two {
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
+	align-items: center;
+}
+
+.review-section-two ul {
+	display: flex;
+	justify-content: center;
+}
+
+.review-section-two li {
+	display: flex;
 }
 
 /*tag.html end*/
