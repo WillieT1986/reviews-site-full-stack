@@ -5,16 +5,29 @@
 </head>
 <body>
 	<header>
-		<h1 th:text="${tags.tag}"></h1>
+		<h1 th:text="${tag.name}"></h1>
 	</header>
 	
-	<article>
-		<h2>Should be list of Titles Associated with Tag</h2>
-	</article>
-	<p>
-		<a href="http://localhost:8080/categories">Back to Home</a>
-		<a href="http://localhost:8080/category?id=1">Back to Category</a>
-	</p>
+	<main>
+		<section>
+			<article>
+				<h2>Anime associated with <strong th:text="${tag.name}"></strong> </h2>
+			</article>
+		</section>
+		
+		<section th:each="review: ${tag.reviews}">
+			<ul>
+				<li><h4><a th:href="@{/tag(id=${tag.id})}" th:text="${review.title}"></a></h4></li>
+			</ul>
+		</section>
+	</main>
+	
+	<footer>
+		<p>
+			<a href="http://localhost:8080/categories">Back to Home</a>
+			<a href="http://localhost:8080/category?id=1">Back to Category</a>
+		</p>
+	</footer>
 
 </body>
 </html>
